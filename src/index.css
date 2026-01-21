@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Brand Colors */
+  --color-brand-yellow: #FFD400;
+  --color-brand-black: #000000;
+  --color-brand-white: #FFFFFF;
+
+  /* Semantic UI Colors */
+  --color-primary: var(--color-brand-yellow);
+  --color-primary-foreground: var(--color-brand-black);
+
+  --color-secondary: #333333;
+  --color-secondary-foreground: var(--color-brand-white);
+
+  --color-background: var(--color-brand-black);
+  --color-foreground: var(--color-brand-white);
+
+  --color-card: #111111;
+  --color-card-foreground: var(--color-brand-white);
+
+  --color-muted: #666666;
+  --color-muted-foreground: #A1A1AA;
+
+  --color-border: #222222;
+  --color-input: #222222;
+  --color-ring: var(--color-brand-yellow);
+
+  /* Fonts */
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-heading: "Poppins", system-ui, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+  }
+
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-brand-black);
+    color: var(--color-brand-white);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom Utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #FFD400, #FACC15);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
